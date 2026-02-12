@@ -6,41 +6,41 @@ Welcome to the Playwright Typescript automation framework for End-to-End (E2E) a
 
 ## Features
 
-- UI tests for Web application
-- API tests for Open Library API using the Playwright APIRequestContext
-- Tests tagged for regression, smoke, ui and api
-- Generate detailed Allure reports
+- `UI` tests for `Web application`
+- `API` tests for Open Library API using the Playwright APIRequestContext
+- Tests tagged for `regression, smoke, ui and api`
+- Generates detailed `Allure Reports`
 
 ----
 
 ## Project Structure
 
-- **images/** – Contains image files used in API test scenario, such as thumbnail images comparision.
-- **testReport-screeshots/** - Contains screenshots taken during local test execution for reference and verification purposes.
-- **tests/features/** – Contains Cucumber feature files for UI and API tests.
-- **tests/fixtures/** – Used to manage Page Objects and provide a centralized way to initialize and share them across tests.
-- **tests/pages/** – Contains Page Object Model (POM) classes for UI automation.
-- **tests/steps/** – Contains step definition files that implement Cucumber steps.
-- **tests/utils/** – Contains helper functions for reusable logic.
-- **package.json** – Contains npm scripts for running tests.
-- **playwright.config.ts** – Contains global configuration for Playwright tests.
-- **allure-results && allure-report/** – Stores test results for Allure reporting.
+- `images/` – Contains image files used in API test scenario, such as thumbnail images comparision.
+- `testReport-screeshots/` - Contains screenshots taken during local test execution for reference and verification purposes.
+- `tests/features/` – Contains Cucumber feature files for UI and API tests.
+- `tests/fixtures/` – Used to manage Page Objects and provide a centralized way to initialize and share them across tests.
+- `tests/pages/` – Contains Page Object Model (POM) classes for UI automation.
+- `tests/steps/` – Contains step definition files that implement Cucumber steps.
+- `tests/utils/` – Contains helper functions for reusable logic.
+- `package.json` – Contains npm scripts for running tests.
+- `playwright.config.ts` – Contains global configuration for Playwright tests.
+- `allure-results/ && allure-report/` – Stores test results for Allure reporting.
 
 -----
 
 ## Test Tags
 
 **UI / E2E Tests:**
-- **@ui** – UI tests
-- **@api** – API tests
-- **@regression** – Both UI and API tests
-- **@smoke** – Smoke tests
+- `@ui` – UI tests
+- `@api` – API tests
+- `@regression` – Both UI and API tests
+- `@smoke` – Smoke tests for UI
 
 **Non-automated tests:**
-It contains more additional **functional tests and non-functional tests** but they don't run in test suite.
+- It contains more additional **functional tests and non-functional tests** but they don't run in test suite.
 
 - Feature file `additionalTests.feature` tagged with `@outOfScope`
-- `additionalTests.steps.ts` file contains placeholder implementations for undefined step definitions.
+- The file `additionalTests.steps.ts` contains placeholder implementations for undefined step definitions.
 
 -----
 
@@ -49,7 +49,7 @@ It contains more additional **functional tests and non-functional tests** but th
 The API tests are implemented within the same Playwright framework as the UI tests.
 Because of this design:
 
-- Before executing each API test, the framework automatically runs a test __UI cookies setup__: `tests/steps/cookies.setup.ts`
+- Before executing each API test, the framework automatically runs a test __UI cookies setup:__ `tests/steps/cookies.setup.ts`
 - This ensures that any required cookies or session data are initialized.
 - It is part of the shared setup workflow between UI and API tests.
 - It does not affect API test results.
@@ -59,7 +59,7 @@ Because of this design:
 
 ## Test Report images
 
-- I have attached __test report screenshots__ in the `testreport-screenshots/` folder.
+- I have attached __test report screenshots__ under the `testReport-screenshots/` folder.
 - These screenshots were **generated locally** when the tests were executed on my machine.
 
 ## VS Code - Navigating from Feature file Steps to Step Definitions
@@ -90,7 +90,7 @@ Because of this design:
 ## Run Tests
 
 **Run All tests:**
-  Use the following command to run both UI and API tests tagged with @regression:
+  - Use the following command to run both UI and API tests tagged with `@regression`:
 
   ```bash
   npm run all:tests 
@@ -106,13 +106,11 @@ Because of this design:
   ```
   
 **Run specific E2E tests using Custom tags:**
-
-  Use the following command to run all UI tests in headed mode:
+  - Use the following command to run all UI tests in headed mode:
   ```bash
   npm run e2e:tests:headed
   ```  
-
-  Use the following command to run all UI tests:
+  - Use the following command to run all UI tests:
   ```bash
   npm run e2e:tests
   ```  
@@ -120,7 +118,7 @@ Because of this design:
 ## Run API Tests
 
 **Run all API tests:**
-  Use the following command to run all API tests:
+  - Use the following command to run all API tests:
   ```bash
   npm run api:tests 
   ```
