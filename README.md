@@ -15,26 +15,26 @@ Welcome to the Playwright Typescript automation framework for End-to-End (E2E) a
 
 ## Project Structure
 
-• **images/** – Contains image files used in API test scenario, such as thumbnail images comparision.
-• **testReport-screeshots/** - Contains screenshots taken during local test execution for reference and verification purposes.
-• **tests/features/** – Contains Cucumber feature files for UI and API tests.
-• **tests/fixtures/** – Used to manage Page Objects and provide a centralized way to initialize and share them across tests.
-• **tests/pages/** – Contains Page Object Model (POM) classes for UI automation.
-• **tests/steps/** – Contains step definition files that implement Cucumber steps.
-• **tests/utils/** – Contains helper functions for reusable logic.
-• **package.json** – Contains npm scripts for running tests.
-• **playwright.config.ts** – Contains global configuration for Playwright tests.
-• **allure-results && allure-report/** – Stores test results for Allure reporting.
+- • **images/** – Contains image files used in API test scenario, such as thumbnail images comparision.
+- • **testReport-screeshots/** - Contains screenshots taken during local test execution for reference and verification purposes.
+- • **tests/features/** – Contains Cucumber feature files for UI and API tests.
+- • **tests/fixtures/** – Used to manage Page Objects and provide a centralized way to initialize and share them across tests.
+- • **tests/pages/** – Contains Page Object Model (POM) classes for UI automation.
+- • **tests/steps/** – Contains step definition files that implement Cucumber steps.
+- • **tests/utils/** – Contains helper functions for reusable logic.
+- • **package.json** – Contains npm scripts for running tests.
+- • **playwright.config.ts** – Contains global configuration for Playwright tests.
+- • **allure-results && allure-report/** – Stores test results for Allure reporting.
 
 -----
 
 ## Test Tags
 
 **UI / E2E Tests:**
-• **@ui** – UI tests
-• **@api** – API tests
-• **@regression** – Both UI and API tests
-• **@smoke** – Smoke tests
+- • **@ui** – UI tests
+- • **@api** – API tests
+- • **@regression** – Both UI and API tests
+- • **@smoke** – Smoke tests
 
 **Non-automated tests:**
 It contains more additional **functional tests and non-functional tests** but they don't run in test suite.
