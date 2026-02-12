@@ -1,0 +1,20 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+.features-gen/
+dist/
+
+# IDE 
+.vscode/
+
+# Cookies config folder
+config/
+
+# Allure reports folder
+allure-report/
+allure-results/

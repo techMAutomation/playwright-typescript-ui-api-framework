@@ -1,0 +1,30 @@
+{
+  "name": "playwright-typescript-ui-api-framework",
+  "version": "1.0.0",
+  "description": "Playwright Typescript automation framework for UI and API tests.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "pretest": "rm -R -f dist && rm -R -f config && rm -R -f allure-report && rm -R -f allure-results",
+    "all:tests": "npm run pretest && npx bddgen && npx playwright test --grep @regression",
+    "e2e:tests:headed": "npm run pretest && npx bddgen && npx playwright test --headed --grep @ui",
+    "e2e:tests": "npm run pretest && npx bddgen && npx playwright test --grep @ui",
+    "api:tests": "npm run pretest && npx bddgen && npx playwright test --grep @api",
+    "generate:allure:report": "npx allure generate allure-results && npm run posttest",
+    "posttest": "allure serve allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3",
+    "@types/node-fetch": "^2.6.13",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.5",
+    "dotenv": "^17.2.4",
+    "jpeg-js": "^0.4.4",
+    "pixelmatch": "^7.1.0",
+    "playwright-bdd": "^8.4.2"
+  }
+}
